@@ -6,14 +6,13 @@ const Styledfooter = styled.footer`
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
     align-items: center;
-    justify-content: flex-end;
     width: 100%;
     padding-top: 15px;
     position: fixed;
-    bottom:0px;
-    width:100%;
+    bottom: 0px;
+    
+
 `
 
 function Footer(){

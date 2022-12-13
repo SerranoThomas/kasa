@@ -1,6 +1,5 @@
 import React from 'react'
 import {  BrowserRouter, Routes,  Route} from "react-router-dom";
-import { createGlobalStyle } from 'styled-components';
 
 //Importations des 4 pages du site
 import Home from '../../pages/Home'
@@ -12,19 +11,9 @@ import Accomodation from '../../pages/Accomodation';
 import Header from '../Header'
 import Footer from '../Footer'
 
-//Création d'un layout
-const GlobalStyle = createGlobalStyle`
-    body{
-        width : 100%;
-        font-family : Montserrat;
-        color: #FF6060;        
-    }
-`
-
 function App(){
   return(
     <BrowserRouter>
-        <GlobalStyle/>
             <Header/>
             <Routes>
                 <Route exact path="/" element={<Home />} /> 

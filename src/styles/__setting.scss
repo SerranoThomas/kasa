@@ -1,0 +1,17 @@
+*{
+    color: $color-primary;
+}
+
+body{
+    width : 95%;
+    height: 100%;
+    font-family : Montserrat;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    box-sizing: border-box;
+    list-style: none;
+}
+ul{
+    list-style: none;
+}

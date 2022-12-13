@@ -1,0 +1,36 @@
+.kasa-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    img{
+        width: 30%;
+        max-width: 250px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 20%;
+        gap: 20%;
+        padding-left:0%;
+        text-decoration: none;
+        @media screen and (max-width: 900px){
+            text-transform: uppercase;
+            width: 30%;
+        }
+        @media screen and (max-width:768px){
+            width : 40%;
+        }
+        @media screen and (max-width: 576px) {
+            width: 50%;
+            font-size : 0.8em;
+        }
+        @media  screen and (max-width: 425px) {
+            font-size: 0.7em;
+        }
+    }
+    a{ 
+        text-decoration: none;
+   }
+}

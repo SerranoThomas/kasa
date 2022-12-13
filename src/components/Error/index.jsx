@@ -25,9 +25,11 @@ const LinkError= styled(Link)`
 function Error(){
     return(
         <ErrorContainer>
+            <p className="Test">Test sass</p>
             <NumeroError>404</NumeroError>
             <TextError>Oups! La page que vous demandez n'existe pas.</TextError>
             <LinkError to='/'>Retourner à la page d'accueil</LinkError>
+            
         </ErrorContainer>
     )
 }
