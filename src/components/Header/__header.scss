@@ -1,8 +1,10 @@
 .kasa-navbar{
+   
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
+    padding:15px;
     img{
         width: 30%;
         max-width: 250px;
@@ -11,10 +13,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        padding-left: 0;
         width: 20%;
         gap: 20%;
-        padding-left:0%;
-        text-decoration: none;
+        text-decoration: none; 
+        
         @media screen and (max-width: 900px){
             text-transform: uppercase;
             width: 30%;
@@ -32,5 +35,6 @@
     }
     a{ 
         text-decoration: none;
+        color: $color-primary;
    }
 }

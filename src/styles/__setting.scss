@@ -1,17 +1,21 @@
-*{
+html{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+body{
+    width : 100%;
+    height:100%;
+    flex-grow: 1;
+    margin: 0;
+    font-family : Montserrat;
+    list-style: none;    
     color: $color-primary;
 }
-
-body{
-    width : 95%;
-    height: 100%;
-    font-family : Montserrat;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    box-sizing: border-box;
-    list-style: none;
+#root{
+    height: 100%
 }
 ul{
     list-style: none;
 }
+

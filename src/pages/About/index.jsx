@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "../../components/Banner";
 
 import BannerAbout from '../../assets/BannerAbout.png'
 
@@ -8,7 +9,7 @@ import BannerAbout from '../../assets/BannerAbout.png'
 function About(){
     return(
         <div>
-            <img src={BannerAbout} alt="banière page à propos" />
+            <Banner image={BannerAbout} titre=''/>
         </div>
     )
 }

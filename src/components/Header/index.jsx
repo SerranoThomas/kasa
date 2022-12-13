@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom'
 import logo from '../../assets/LOGO.svg'
 
 
- 
 function Header() {
     return (
         <header>
