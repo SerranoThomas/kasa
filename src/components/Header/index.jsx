@@ -9,9 +9,9 @@ import logo from '../../assets/LOGO.svg'
 function Header() {
     return (
         <header>
-        <nav className='kasa-navbar'>
+        <nav className='kasa__navbar'>
             <img src={logo} alt='logo-kasa'/>
-            <ul className='kasa-navbar-links'>
+            <ul className='kasa__navbar-links'>
                 <li><Link to="/">Accueil</Link></li>
                 <li><Link to="/about">A Propos</Link></li>
             </ul>

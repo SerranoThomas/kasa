@@ -1,9 +1,73 @@
 import { useParams } from "react-router";
+import logements from "../../datas/logements.json"
+import Dropdown from "../../components/Dropdown"
+import Owner from "../../components/Owner";
+import Tags from "../../components/Tags";
+import Ratings from "../../components/Ratings";
 
 function Accomodation(){
-    const {id} = useParams
+    //On extrait l'id de l'url avec useParams
+    const {id} = useParams()
+    //On enlève le ":" de l'id grâce à replace
+    const cleanId = (id.replace(':',''))
+    /* console.log(cleanId)
+    console.log(logements)  */
+    //Si En li
+    //On récupère le logement en question avec une fonction filter
+    const myAccomodation = logements.filter(logement => logement.id === cleanId)
+    console.log(myAccomodation)
+    
     return(
-        <h1> Page accomodation {id}</h1>
+        <div className="kasa__Accomodation">
+            {myAccomodation.map((accomodation, index)=>(
+                <div key={accomodation.id}>
+                    <div>
+                        <div className="kasa__Accomodation-titles">
+                            <h1>{accomodation.title}</h1>
+                            <h2>{accomodation.location}</h2>
+                        </div>
+                        <div className="kasa__Accomodation-tags">
+                            {accomodation.tags.map((tag,i)=>
+                                <Tags 
+                                    key={`${tag}-${i}`} 
+                                    tagName={tag}
+                                />
+                            )}
+                        </div>
+                    </div>
+                    
+                    <div>
+                         <div className="kasa__Accomodation-owner">
+                            <Owner 
+                                name = {accomodation.host.name}
+                                picture = {accomodation.host.picture}
+                            />
+                        </div>
+                        <div className="kasa__Accomodation-rating">
+                                <Ratings rating={accomodation.rating}></Ratings>
+                        </div>
+                    </div>
+                   
+                    
+
+                    <div className="kasa__Accomodation--descriptions">
+                        <Dropdown 
+                            titre = "Description"
+                            content = {accomodation.description}
+                        />
+                       <Dropdown 
+                            titre = "Equipements"
+                            content = 
+                                {<ul>
+                                    {accomodation.equipments.map((equipment) => 
+                                    <li key={equipment}>{equipment} </li>)}
+                                </ul>}
+                        />
+                    </div>
+                </div>
+            ))}
+        </div>
+        
     )
 }
 

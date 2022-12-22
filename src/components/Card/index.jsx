@@ -1,10 +1,13 @@
-function Card({cover, location}){
+import { Link } from "react-router-dom"
+
+function Card({cover, location, id}){
     console.log({location})
     return(
-        <div className="kasa-card__container">
+
+        <Link to={`/Accomodation/:${id}`}className="kasa__card">
             <img src={cover} alt="localisation" />
-            <span>{location}</span>
-        </div>
+            <div className="kasa__card-location">{location}</div>
+        </Link>
     )
 }
 

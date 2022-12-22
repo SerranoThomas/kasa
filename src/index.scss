@@ -1,9 +1,17 @@
 @import "./styles/_colors";
 @import"./styles/_setting";
+@import "./styles/__mixin.scss";
 @import "./components/Header/_header";
 @import "./components/Footer/_footer";
 @import "./components/Banner/_banner";
 @import "./components/Error/_error";
+@import "./components/Dropdown/_dropdown";
+@import "./components/Card/_card";
+@import "./components/Tags/_tags";
+@import "./components/Owner/_owner";
+@import "./components/Ratings/_ratings";
 @import "./pages/Home/_home";
+@import "./pages/About/__about";
+@import "./pages/Accomodation/_accomodation";
 
 

@@ -1,9 +1,9 @@
 function Banner({ image, titre }){
     return(
         <div className='Container__banner'>
-                <span className="Container__banner__title">{titre}</span>
-                <img src={image} alt="Bannière" />
-            </div>
+            <img src={image} alt="Bannière" />
+            <p className="Container__banner__title">{titre}</p>        
+        </div>
     )
 }
 export default Banner
