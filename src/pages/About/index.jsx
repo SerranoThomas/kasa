@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../../components/Banner";
 import Dropdown from "../../components/Dropdown";
 import BannerAbout from '../../assets/BannerAbout.png';
-import BannerAboutMobile from "../../assets/BannerAboutMobile.jpg"
+//import BannerAboutMobile from "../../assets/BannerAboutMobile.jpg"
 
    
 const listeAbout = [
@@ -26,15 +26,17 @@ const listeAbout = [
 
 function About(){
     return (
-        <div className="About-Container">
-            <Banner image={BannerAbout} titre='' className="Banner-About"/>
-            
-            {listeAbout.map((info)=>(
+        <div className="About">
+            <Banner image={BannerAbout} titre='' className="About_Banner"/>
+            <div className="About_Content">
+                {listeAbout.map((info)=>(
                 <Dropdown 
                 titre={info.title}
                 content={info.content}
-            />
-            ))}
+                />
+                ))}
+            </div>
+            
         </div>
     )
 }

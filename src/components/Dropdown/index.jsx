@@ -16,7 +16,7 @@ function Dropdown({titre, content}){
         <div className="dropdown__content">{content}</div>
     </div>
    ) :(
-    <div className="dropdown">
+    <div className="dropdown">    
         <div className="dropdown__title">
                     <p>{titre}</p>
                     <button 

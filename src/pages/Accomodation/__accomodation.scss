@@ -1,0 +1,47 @@
+.kasa__Accomodation{
+    width: 90%;
+    @include flex-column;
+    &__essentials{
+        width: 100%;
+        @include flex-row($a-i:stretch,$j-c:space-between);
+        &-titles{
+            h1{
+                font-size: 1.3rem;
+                font-weight:500
+            }
+            h2{
+                font-size: 0.9rem;
+                font-weight:500;
+
+            }
+            }
+        &-tags{
+                @include flex-row($j-c: flex-start)
+                
+            }
+        &-owner{
+            @include flex-column;
+            justify-content: space-between;
+            &-infos{
+                @include flex-row
+            }
+        }
+            
+        
+    }
+    &__secondary{
+        width:100%;
+        @include flex-row($j-c:space-between, $a-i:flex-start);
+        @media screen and (max-width: 600px) {
+            @include flex-column;}
+        &-infos{
+            width: 47%;
+            @media screen and (max-width: 600px){
+                width: 90%
+            }
+        }
+        
+    }
+        
+    }
+

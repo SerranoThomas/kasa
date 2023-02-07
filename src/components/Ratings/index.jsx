@@ -7,7 +7,7 @@ function Ratings({rating}){
     return(
         <div>
             {range.map((rangeElem)=>
-                rating >= rangeElem ? <span key={rangeElem}><img src={RedStar} alt='étoile rose'/></span> : <span><img src={GreyStar} alt='étoile grise'/></span>  
+                rating >= rangeElem ? <span key={rangeElem}><img src={RedStar} alt='étoile rose'/></span> : <span key={rangeElem}><img src={GreyStar} alt='étoile grise'/></span>  
             )
             }
         </div>

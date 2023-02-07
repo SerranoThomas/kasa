@@ -18,44 +18,50 @@ function Accomodation(){
     console.log(myAccomodation)
     
     return(
-        <div className="kasa__Accomodation">
-            {myAccomodation.map((accomodation, index)=>(
-                <div key={accomodation.id}>
-                    <div>
-                        <div className="kasa__Accomodation-titles">
-                            <h1>{accomodation.title}</h1>
-                            <h2>{accomodation.location}</h2>
+        <div>
+            {myAccomodation.map((accomodation)=>(
+                <div key={accomodation.id} className="kasa__Accomodation">
+                    <div className="kasa__Accomodation__essentials">
+                        <div>
+                            <div className="kasa__Accomodation__essentials-titles">
+                                <h1>{accomodation.title}</h1>
+                                <h2>{accomodation.location}</h2>
+                            </div>
+                            <div className="kasa__Accomodation__essentials-tags">
+                                {accomodation.tags.map((tag,i)=>
+                                    <Tags 
+                                        key={`${tag}-${i}`} 
+                                        tagName={tag}
+                                    />
+                                )}
+                            </div>
                         </div>
-                        <div className="kasa__Accomodation-tags">
-                            {accomodation.tags.map((tag,i)=>
-                                <Tags 
-                                    key={`${tag}-${i}`} 
-                                    tagName={tag}
+        
+                        <div className="kasa__Accomodation__essentials-owner">
+                            <div className="kasa__Accomodation__essentials-owner-infos">
+                                <Owner 
+                                    name = {accomodation.host.name}
+                                    picture = {accomodation.host.picture}
                                 />
-                            )}
+                            </div>
+                            <div className="kasa__Accomodation__essentials-owner-rating">
+                                    <Ratings rating={accomodation.rating}></Ratings>
+                            </div>
                         </div>
-                    </div>
                     
-                    <div>
-                         <div className="kasa__Accomodation-owner">
-                            <Owner 
-                                name = {accomodation.host.name}
-                                picture = {accomodation.host.picture}
-                            />
-                        </div>
-                        <div className="kasa__Accomodation-rating">
-                                <Ratings rating={accomodation.rating}></Ratings>
-                        </div>
                     </div>
                    
                     
 
-                    <div className="kasa__Accomodation--descriptions">
-                        <Dropdown 
+                    <div className="kasa__Accomodation__secondary">
+                        <div className="kasa__Accomodation__secondary-infos">
+                            <Dropdown 
                             titre = "Description"
                             content = {accomodation.description}
                         />
-                       <Dropdown 
+                        </div>
+                        <div className="kasa__Accomodation__secondary-infos">
+                            <Dropdown 
                             titre = "Equipements"
                             content = 
                                 {<ul>
@@ -63,10 +69,14 @@ function Accomodation(){
                                     <li key={equipment}>{equipment} </li>)}
                                 </ul>}
                         />
+                        </div>
+                       
                     </div>
                 </div>
             ))}
         </div>
+            
+        
         
     )
 }

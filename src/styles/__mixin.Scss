@@ -5,10 +5,10 @@
     align-content: space-between;
 }
 
-@mixin flex-row ($a-i:center){
+@mixin flex-row ($a-i:center, $j-c: center){
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: $j-c;
     align-items: $a-i;
     flex-wrap: wrap;
 }

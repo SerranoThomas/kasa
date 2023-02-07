@@ -1,6 +1,5 @@
 .dropdown{
     @include flex-column($a-i:flex-start);
-    width: 75%;
     margin: 10px;
     &__title{
         display: flex;

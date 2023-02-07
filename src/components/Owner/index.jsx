@@ -1,8 +1,8 @@
 function Owner({name,picture}){
     return(
-        <div>
-            <div>{name}</div>
-            <img src={picture} alt='propriétaire de la propriété'/>
+        <div className="owner">
+            <div className="owner__name">{name}</div>
+            <img src={picture} alt='propriétaire' className="owner__picture"/>
         </div>
     )
 }
