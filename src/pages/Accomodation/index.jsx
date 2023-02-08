@@ -1,3 +1,4 @@
+import React from "react"
 import { useParams } from "react-router";
 import logements from "../../datas/logements.json"
 import Dropdown from "../../components/Dropdown"
@@ -18,7 +19,7 @@ function Accomodation(){
     console.log(myAccomodation)
     
     return(
-        <div>
+        <React.Fragment>
             {myAccomodation.map((accomodation)=>(
                 <div key={accomodation.id} className="kasa__Accomodation">
                     <div className="kasa__Accomodation__essentials">
@@ -45,7 +46,7 @@ function Accomodation(){
                                 />
                             </div>
                             <div className="kasa__Accomodation__essentials-owner-rating">
-                                    <Ratings rating={accomodation.rating}></Ratings>
+                                <Ratings rating={accomodation.rating}></Ratings>
                             </div>
                         </div>
                     
@@ -74,7 +75,7 @@ function Accomodation(){
                     </div>
                 </div>
             ))}
-        </div>
+        </React.Fragment>
             
         
         

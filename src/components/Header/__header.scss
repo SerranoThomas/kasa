@@ -1,8 +1,8 @@
+header{
+    width:100%;
+}
 .kasa__navbar{
-   
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-row($j-c:space-between);
     width: 95%;
     padding:15px;
     img{

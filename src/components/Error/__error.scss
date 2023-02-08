@@ -1,13 +1,7 @@
 .kasa-error__container{
+    @include flex-column;
     flex-grow:1;
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    @media screen and (max-width: 768px) {
-        
-    }
     &__number {
         font-weight: 700;
         font-size: 10em;

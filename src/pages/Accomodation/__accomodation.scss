@@ -1,6 +1,7 @@
 .kasa__Accomodation{
-    width: 90%;
+    width:90%;
     @include flex-column;
+    flex-grow:1;
     &__essentials{
         width: 100%;
         @include flex-row($a-i:stretch,$j-c:space-between);

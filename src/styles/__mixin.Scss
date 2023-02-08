@@ -12,3 +12,7 @@
     align-items: $a-i;
     flex-wrap: wrap;
 }
+
+@mixin min-height{
+    min-height: 70vh
+}
