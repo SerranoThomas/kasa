@@ -1,0 +1,25 @@
+.kasa-error__container{
+    @include flex-column;
+    flex-grow:1;
+    text-align: center;
+    &__number {
+        font-weight: 700;
+        font-size: 10em;
+        margin: 0.3em;
+        @media screen and (max-width: 768px) {
+            font-size: 7em;
+        }
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 2em;
+        padding-bottom: 2em;
+        @media screen and (max-width: 768px) {
+            font-size: 1.5em;
+        }
+    }
+    a{
+        color: #FF6060;
+        ;
+    }
+}

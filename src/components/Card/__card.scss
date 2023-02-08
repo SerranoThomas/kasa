@@ -1,0 +1,38 @@
+.kasa__card{
+    width: 33%;
+    height: 200px;
+    margin: 10px;
+    background-color: $noir;
+    border-radius: 10px;
+    @include flex-column;
+    position: relative;
+    @media screen and (min-width: 320px){
+        width: 90%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 30%;
+        height: 250px;
+    }
+    @media screen and (min-width: 1441px) {
+        height: 300px
+    }
+    img{
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        z-index:1;
+        width:100%;
+        height: 100%;
+        border-radius: inherit;
+        opacity: 0.8;
+    }
+    &-location{
+        width: 40%;
+        position: absolute;
+        color: $blanc;
+        z-index:2;
+        bottom: 3%;
+        left: 5%;
+        font-weight: 600;
+    }
+}

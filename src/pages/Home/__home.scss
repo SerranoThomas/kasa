@@ -1,0 +1,12 @@
+.kasa__Home{
+    @include flex-column;
+    width: 100%;
+    &-accomodations{
+        @include flex-row;
+        width: 90%;
+        border-radius: 10px;
+        margin-top: 2em;
+        padding: 15px;
+        background-color: $background;
+}
+}

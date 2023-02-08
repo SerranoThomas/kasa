@@ -1,0 +1,8 @@
+.kasa__footer{
+    @include flex-column();
+    background-color: $noir;
+    color: white;
+    width: 100%;
+    padding-top: 15px;
+    
+}

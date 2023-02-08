@@ -1,0 +1,16 @@
+
+body{
+    font-family : Montserrat;
+    list-style: none;    
+    color: $color-primary;
+    margin: 0;
+}
+#root{
+    min-height: 100vh;
+    @include flex-column;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+

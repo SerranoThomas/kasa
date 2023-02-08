@@ -1,0 +1,13 @@
+.About{
+    width:100%;
+    @include flex-column;
+    flex-grow: 1;
+    &_Banner{
+        @media screen and (max-width: 600px){
+        display: none
+        }
+    }
+    &_Content{
+        width:75%
+    }
+}

@@ -1,0 +1,43 @@
+.Container__banner{
+    width: 90%;
+    height: 50%;
+    @include flex-column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $noir;
+    border-radius: 25px;
+    @media screen and (max-width: 600px) {
+        border-radius: 10px;
+        height: 120px;
+        }
+    img{
+        width:100%;
+        height: 100%;
+        position : relative;
+        z-index: 1;
+        border-radius: inherit;
+        opacity: 0.7;
+        object-position: center;
+    }
+    &__title{
+            position: absolute;
+            z-index:2;
+            color:$blanc;
+            font-size: 2rem;
+            width: 85%;
+            height: 100px;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width:600px) {
+                font-size:1.7rem;
+                display: flex;
+                align-content: center;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+
+        }
+    }

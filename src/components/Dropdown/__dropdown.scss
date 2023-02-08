@@ -1,0 +1,38 @@
+.dropdown{
+    @include flex-column($a-i:flex-start);
+    margin: 10px;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: $color-primary;
+        color: $blanc;
+        margin:0;
+        padding: 10px;
+        border-radius: 5px;
+        p{
+            margin:0;
+        }
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline: inherit;
+        }
+        &__bouton-ouvert{
+            transform: rotate(180deg);
+        }
+    }
+    &__content{
+        width: 100%;
+        background-color: $background;
+        margin:0;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+}
+
+

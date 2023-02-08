@@ -1,0 +1,11 @@
+.owner{
+    @include flex-row;
+    &__name{
+        font-size: 1.2em
+    }
+    &__picture{
+    border-radius:100%;
+    width: 50px;
+
+}
+}
